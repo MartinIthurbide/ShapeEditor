@@ -46,8 +46,8 @@ public class ShapeGroup implements Shape, Iterable {
         int width = 0, height = 0;
         while (it.hasNext()) {
             Point2D size = it.next().getSize();
-            width += size.getX();
-            height += size.getY();
+            width += Math.max(width, size.getY());
+            height += Math.max(height, size.getX());
         }
         return new Point2D.Double(height, width);
     }
