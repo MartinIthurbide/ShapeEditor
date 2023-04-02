@@ -1,4 +1,7 @@
-package xshape;
+package xshape.gui;
+
+import xshape.factory.ShapeFactory;
+import xshape.factory.ShapeFactoryFx;
 
 public class FxApp extends XShape {
 
@@ -6,8 +9,9 @@ public class FxApp extends XShape {
     protected ShapeFactory createFactory() {
         return new ShapeFactoryFx(FxApplication._root);
     }
+
     @Override
-    void run() {
+    public void run() {
         draw();
         FxApplication.launch(FxApplication.class);
     }

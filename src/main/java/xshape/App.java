@@ -1,7 +1,6 @@
 package xshape;
 
-
-
+import xshape.gui.*;
 
 public class App {
 

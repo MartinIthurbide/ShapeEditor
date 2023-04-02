@@ -1,6 +1,9 @@
-package xshape;
+package xshape.gui;
 
 import java.awt.geom.Point2D;
+
+import xshape.factory.*;
+import xshape.shapes.*;
 
 public abstract class XShape {
     private ShapeFactory _factory = null;
@@ -10,7 +13,7 @@ public abstract class XShape {
     protected abstract ShapeFactory createFactory();
 
     // Handler to start the GUI
-    abstract void run();
+    public abstract void run();
 
     private void createScene() {
         Shape shape = _factory.createRectangle(100, 100, 50, 50);

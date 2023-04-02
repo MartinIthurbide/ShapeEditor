@@ -1,4 +1,4 @@
-package xshape;
+package xshape.shapes;
 
 import java.awt.geom.Point2D;
 import javafx.scene.Group;

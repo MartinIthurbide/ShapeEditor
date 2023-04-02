@@ -1,4 +1,4 @@
-package xshape;
+package xshape.gui;
 
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -12,7 +12,7 @@ public class FxApplication extends Application {
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("XShape JavaFx Rendering");
         Scene _scene = new Scene(_root, 500, 500);
-        _scene.setFill(javafx.scene.paint.Color.RED);
+        _scene.setFill(javafx.scene.paint.Color.WHITE);
         primaryStage.setScene(_scene);
         primaryStage.show();
     }

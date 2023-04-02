@@ -1,6 +1,9 @@
-package xshape;
+package xshape.shapes;
 
 import java.awt.geom.Point2D;
+
+import xshape.gui.AwtContext;
+
 import java.awt.*;
 
 public class RectangleAwt extends Rectangle {
