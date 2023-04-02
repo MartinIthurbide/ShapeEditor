@@ -4,7 +4,7 @@ import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class ShapeGroup implements Shape, Iterable {
+public class ShapeGroup implements Shape, Iterable<Shape> {
 
     private ArrayList<Shape> _subShapes;
 
