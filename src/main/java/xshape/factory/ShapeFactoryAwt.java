@@ -1,6 +1,9 @@
 package xshape.factory;
 
 
+import java.awt.geom.Point2D;
+import java.util.ArrayList;
+
 import xshape.shapes.*;
 
 
@@ -15,7 +18,12 @@ public class ShapeFactoryAwt implements ShapeFactory {
     }
 
     @Override
-    public Polygon creatPolygon() {
+    public Polygon createPolygon() {
         return new PolygonAwt();
+    }
+
+    @Override
+    public Polygon createPolygon(ArrayList<Point2D> listPoint, int nbPoints) {
+        return new PolygonAwt(listPoint, nbPoints);
     }
 }

@@ -23,7 +23,6 @@ public class PolygonAwt extends Polygon {
     @Override
     public void draw() {
 		Graphics g = AwtContext.instance().graphics();
-		Color c = g.getColor();
         int [] tabX = new int[5];
         int [] tabY = new int[5];
         for (int i = 0; i < this.getNbPoints(); i++) {

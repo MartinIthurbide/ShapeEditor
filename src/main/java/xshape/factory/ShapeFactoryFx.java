@@ -1,5 +1,8 @@
 package xshape.factory;
 
+import java.awt.geom.Point2D;
+import java.util.ArrayList;
+
 import javafx.scene.Group;
 import xshape.shapes.*;
 
@@ -17,7 +20,12 @@ public class ShapeFactoryFx implements ShapeFactory {
     }
 
     @Override
-    public Polygon creatPolygon() {
+    public Polygon createPolygon() {
         return new PolygonFx(grp);
+    }
+
+    @Override
+    public Polygon createPolygon(ArrayList<Point2D> listPoint, int nbPoints) {
+        return new PolygonFx(listPoint, nbPoints, grp);
     }
 }
