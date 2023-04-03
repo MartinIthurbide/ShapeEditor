@@ -87,4 +87,12 @@ public class ShapeGroup implements Shape, Iterable<Shape> {
         return _subShapes.iterator();
     }
 
+    @Override
+    public void rotate(double angle) {
+        Iterator<Shape> it = subShapes();
+        while (it.hasNext()) {
+            it.next().rotate(angle);
+        }
+    }
+
 }

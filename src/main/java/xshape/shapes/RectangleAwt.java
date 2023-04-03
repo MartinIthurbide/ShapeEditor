@@ -27,4 +27,10 @@ public class RectangleAwt extends Rectangle {
 		g.setColor(c);
 	}
 
+	@Override
+	public void rotate(double angle) {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'rotate'");
+	}
+
 }

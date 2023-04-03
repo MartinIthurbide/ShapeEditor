@@ -14,4 +14,6 @@ public interface Shape {
 	Shape setPosition(Point2D position);
 
 	Shape translate(Point2D vec);
+
+	void rotate(double angle); //angle en degrés 0<=angle<=360 
 }

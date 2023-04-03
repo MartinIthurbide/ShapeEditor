@@ -1,5 +1,6 @@
 package xshape.shapes;
 
+import java.awt.geom.AffineTransform;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
@@ -31,8 +32,30 @@ public class PolygonAwt extends Polygon {
         }
         g.setColor(Color.GREEN);
         g.fillPolygon(tabX ,tabY  ,this.getNbPoints());
+        //drawCenter(g); 
+        //drawRotate(g, tabX, tabY);
     }
 
+
+    // afficher le centre de rotation du polygone
+    private void drawCenter(Graphics g){
+        g.setColor(Color.RED);  
+        Point2D centre = this.getCentroid();
+        System.out.println(centre);
+        g.fillOval((int) centre.getX(),(int) centre.getY(), 3, 3);
+    }
+
+    //Change l'orientation puis affiche, afin d'afficher la différence
+    // Ne marche pas comme attendu
+    private void drawRotate(Graphics g, int[] oldX, int[] oldY){
+        super.rotate(60);
+        for (int i = 0; i < this.getNbPoints(); i++) {
+            oldX[i]= this.getXpoints().get(i).intValue();
+            oldY[i]= this.getYpoints().get(i).intValue();
+        }
+        g.setColor(Color.PINK);
+        g.fillPolygon(oldX ,oldY  ,this.getNbPoints());
+    }
     
     
 }

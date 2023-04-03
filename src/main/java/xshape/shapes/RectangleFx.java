@@ -26,4 +26,10 @@ public class RectangleFx extends Rectangle {
 		_adapted.setHeight(size.getY());
 		_adapted.setFill(Color.BLUE);
 	}
+
+	@Override
+	public void rotate(double angle) {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'rotate'");
+	}
 }
