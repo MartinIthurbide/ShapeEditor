@@ -10,15 +10,19 @@ public abstract class Polygon implements Shape {
     /*
      * Attributes
      */
-    private ArrayList<Double> _xpoints = new ArrayList<Double>(Arrays.asList(25.0, 25.0, 100.0, 100.0));
-    private ArrayList<Double> _ypoints = new ArrayList<Double>(Arrays.asList(25.0, 250.0, 250.0, 25.0));
-    private int _nbPoints = 4;
-    private MyColor _color = new MyColor(0, 0, 255);
+    private ArrayList<Double> _xpoints;
+    private ArrayList<Double> _ypoints;
+    private int _nbPoints;
+    private MyColor _color;
 
     /*
      * Constructors
      */
     public Polygon() {
+        _xpoints = new ArrayList<Double>(Arrays.asList(25.0, 25.0, 100.0, 100.0));
+        _ypoints = new ArrayList<Double>(Arrays.asList(25.0, 250.0, 250.0, 25.0));
+        _nbPoints = 4;
+        _color = new MyColor(0, 0, 255);
     }
 
     public Polygon(ArrayList<Point2D> points, int nbPoints, MyColor color) {
