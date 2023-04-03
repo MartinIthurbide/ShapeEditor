@@ -1,8 +1,7 @@
 package xshape.factory;
 
 import javafx.scene.Group;
-import xshape.shapes.Rectangle;
-import xshape.shapes.RectangleFx;
+import xshape.shapes.*;
 
 public class ShapeFactoryFx implements ShapeFactory {
     Group grp;
@@ -15,5 +14,10 @@ public class ShapeFactoryFx implements ShapeFactory {
     public Rectangle createRectangle(double posX, double posY,
             double height, double width) {
         return new RectangleFx(posX, posY, height, width, grp);
+    }
+
+    @Override
+    public Polygon creatPolygon() {
+        return new PolygonFx(grp);
     }
 }
