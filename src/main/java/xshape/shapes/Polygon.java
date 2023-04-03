@@ -88,6 +88,14 @@ public abstract class Polygon implements Shape {
         return _ypoints;
     }
 
+    public void setXpoints(ArrayList<Double> _xpoints) {
+        this._xpoints = _xpoints;
+    }
+
+    public void setYpoints(ArrayList<Double> _ypoints) {
+        this._ypoints = _ypoints;
+    }
+
     @Override
     @Deprecated
     public Shape setPosition(Point2D position) {

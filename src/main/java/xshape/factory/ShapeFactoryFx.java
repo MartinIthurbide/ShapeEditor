@@ -21,12 +21,17 @@ public class ShapeFactoryFx implements ShapeFactory {
     }
 
     @Override
-    public Polygon createPolygon() {
-        return new PolygonFx(grp);
+    public Polygon createPolygon(MyColor color) {
+        return new PolygonFx(grp, color);
     }
 
     @Override
     public Polygon createPolygon(ArrayList<Point2D> listPoint, int nbPoints, MyColor color) {
         return new PolygonFx(listPoint, nbPoints, grp, color);
+    }
+
+    @Override
+    public Polygon createRectangleBis(double posX, double posY, double height, double width, MyColor color) {
+        return new RectanglePolygonFx(posX, posY, height, width, grp, color);
     }
 }

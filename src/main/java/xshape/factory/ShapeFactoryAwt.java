@@ -17,12 +17,17 @@ public class ShapeFactoryAwt implements ShapeFactory {
     }
 
     @Override
-    public Polygon createPolygon() {
-        return new PolygonAwt();
+    public Polygon createPolygon(MyColor color) {
+        return new PolygonAwt(color);
     }
 
     @Override
     public Polygon createPolygon(ArrayList<Point2D> listPoint, int nbPoints, MyColor color) {
         return new PolygonAwt(listPoint, nbPoints, color);
+    }
+
+    @Override
+    public Polygon createRectangleBis(double posX, double posY, double height, double width, MyColor color) {
+        return new RectanglePolygonAwt(posX, posY, height, width, color);
     }
 }
