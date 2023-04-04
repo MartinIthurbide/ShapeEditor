@@ -11,9 +11,10 @@ public class PolygonFx extends Polygon {
     javafx.scene.shape.Polygon _adapted = new javafx.scene.shape.Polygon();
     Group _grp = null;
 
-    public PolygonFx(Group grp) {
+    public PolygonFx(Group grp, MyColor color) {
         _grp = grp;
         _grp.getChildren().add(_adapted);
+        setColor(color);
     }
 
     public PolygonFx(ArrayList<Point2D> points, int nbPoints, Group grp, MyColor color) {

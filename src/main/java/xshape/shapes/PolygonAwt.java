@@ -10,7 +10,8 @@ import java.awt.*;
 
 public class PolygonAwt extends Polygon {
 
-    public PolygonAwt() {
+    public PolygonAwt(MyColor color) {
+        setColor(color);
     }
 
     public PolygonAwt(ArrayList<Point2D> points, int nbPoints, MyColor color) {
