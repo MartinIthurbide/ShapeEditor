@@ -1,15 +1,15 @@
 package xshape.toolbar;
 
-import java.awt.Panel;
+import javax.swing.JToolBar;
 
 import javafx.scene.control.ToolBar;
 
 public abstract class ShapeToolBar implements ToolBarBuilder {
     protected ToolBar fxShapeToolBar;
-    protected Panel awtShapeToolBar;
+    protected JToolBar awtShapeToolBar;
 
     @Override
-    public Panel getAwtToolBar() {
+    public JToolBar getAwtToolBar() {
         return awtShapeToolBar;
     }
 

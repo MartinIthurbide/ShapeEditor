@@ -3,7 +3,6 @@ package xshape.toolbar;
 import javafx.geometry.Orientation;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToolBar;
-import javafx.scene.layout.Background;
 
 public class MenuFX extends MenuToolBar {
 

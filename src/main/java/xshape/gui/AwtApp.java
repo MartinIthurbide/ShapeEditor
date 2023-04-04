@@ -9,6 +9,9 @@ import javax.swing.JFrame;
 
 import xshape.factory.ShapeFactory;
 import xshape.factory.ShapeFactoryAwt;
+import xshape.toolbar.MenuAWT;
+import xshape.toolbar.ShapeTbAWT;
+import xshape.toolbar.ToolBarBuilder;
 
 class GUIHelper {
     public static void showOnFrame(JComponent component, String frameName) {
@@ -48,6 +51,19 @@ public class AwtApp extends XShape {
     @Override
     public void run() {
         JCanvas jc = new JCanvas(this);
+        
+        // initialize the button's toolbar
+        ToolBarBuilder menuToolBar = new MenuAWT();
+        menuToolBar.buildToolBar();
+
+        // initialize the shape's toolbar
+        ToolBarBuilder sBarBuilder = new ShapeTbAWT();
+        sBarBuilder.buildToolBar();
+
+        // set the toolbars
+        jc.add(menuToolBar.getAwtToolBar());
+        jc.add(sBarBuilder.getAwtToolBar());
+
         jc.setBackground(Color.WHITE);
         jc.setPreferredSize(new Dimension(500, 500));
         GUIHelper.showOnFrame(jc, "XShape Swing/AWT Rendering");

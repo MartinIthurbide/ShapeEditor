@@ -1,13 +1,14 @@
 package xshape.toolbar;
 
 import javafx.scene.control.ToolBar;
-import java.awt.Panel;
+
+import javax.swing.JToolBar;
 
 public abstract class MenuToolBar implements ToolBarBuilder {
     protected ToolBar fxMenuToolBar;
-    protected Panel awtMenuToolBar;
+    protected JToolBar awtMenuToolBar;
     @Override
-    public Panel getAwtToolBar() {
+    public JToolBar getAwtToolBar() {
         return awtMenuToolBar;
     }
     @Override

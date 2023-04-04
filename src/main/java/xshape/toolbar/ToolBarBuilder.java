@@ -1,13 +1,13 @@
 package xshape.toolbar;
 
-import java.awt.Panel;
+import javax.swing.JToolBar;
 
 import javafx.scene.control.ToolBar;
 
 public interface ToolBarBuilder {
     public void buildToolBar();
 
-    public Panel getAwtToolBar();
+    public JToolBar getAwtToolBar();
 
     public ToolBar getJavaFXToolBar();
 

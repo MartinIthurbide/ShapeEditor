@@ -1,20 +1,27 @@
 package xshape.toolbar;
 
 import java.awt.FlowLayout;
-import java.awt.Panel;
-import java.awt.Rectangle;
+import java.awt.LayoutManager;
 
-import xshape.shapes.RectangleAwt;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JToolBar;
+
 
 public class ShapeTbAWT extends ShapeToolBar{
 
     @Override
     public void buildToolBar() {
-        super.awtShapeToolBar = new Panel();
 
-        super.awtShapeToolBar.setLayout(new FlowLayout(FlowLayout.LEFT));
+        super.awtShapeToolBar = new JToolBar();
 
-        //super.awtShapeToolBar.add(new Rectangle());
+        JPanel rectangle = new JPanel();
+
+        rectangle.add(new ShapeComponent());
+        
+        super.awtShapeToolBar.add(rectangle);
+
+        super.awtShapeToolBar.setLayout(new FlowLayout(FlowLayout.RIGHT));
     }
 
     @Override
